@@ -1,0 +1,2 @@
+@ECHO OFF
+"C:\Program Files (x86)\Atmel\AVR Tools\AvrAssembler2\avrasm2.exe" -S "D:\Audio_Project\Projects\Atmel\AMC\V110\labels.tmp" -fI -W+ie -o "D:\Audio_Project\Projects\Atmel\AMC\V110\AMC.hex" -d "D:\Audio_Project\Projects\Atmel\AMC\V110\AMC.obj" -e "D:\Audio_Project\Projects\Atmel\AMC\V110\AMC.eep" -m "D:\Audio_Project\Projects\Atmel\AMC\V110\AMC.map" "D:\Audio_Project\Projects\Atmel\AMC\V110\AMC.asm"

@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>6.0</ProjectVersion>
+    <ToolchainName>com.Atmel.AVRAssembler</ToolchainName>
+    <ProjectGuid>933abf1d-4acf-4535-8b18-22a50a86cb17</ProjectGuid>
+    <avrdeviceseries>none</avrdeviceseries>
+    <avrdevice>ATmega1280</avrdevice>
+    <OutputFileName>AMC</OutputFileName>
+    <OutputFileExtension>.obj</OutputFileExtension>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <Language>ASSEMBLY</Language>
+    <OutputType>Executable</OutputType>
+    <ToolchainFlavour>Native</ToolchainFlavour>
+    <avrtool />
+    <KeepTimersRunning>true</KeepTimersRunning>
+    <OverrideVtor>false</OverrideVtor>
+    <OverrideVtorValue />
+    <eraseonlaunchrule>0</eraseonlaunchrule>
+    <EntryFile>$(MSBuildProjectDirectory)\AMC.asm</EntryFile>
+    <AsfVersion>3.4.1</AsfVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'default' ">
+    <OutputPath>bin\default\</OutputPath>
+    <ToolchainSettings>
+      <AvrAssembler>
+  <avrasm.assembler.general.UnsupportedInstructions>Error</avrasm.assembler.general.UnsupportedInstructions>
+  <avrasm.assembler.general.IncludeFile>($IncludeFile)</avrasm.assembler.general.IncludeFile>
+</AvrAssembler>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Assembler.targets" />
+  <ItemGroup>
+    <Compile Include="Utilities.asm">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Definitions.asm">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Globals.asm">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="IO.asm">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="LCD.asm">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Menu.asm">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Output.asm">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="RemoteControl.asm">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="UserCommand.asm">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="TCPIP.asm">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ACP.asm">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Build.asm">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Version.asm">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="AMC.asm">
+      <SubType>compile</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>
